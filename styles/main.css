@@ -55,6 +55,72 @@ header {
 	}
 }
 
+/* the styles for the navbar */
+.navbar {
+	background-color: var(--primary-color);
+	position: relative;
+}
+
+/* the styles for the menu */
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu > li {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.menu a {
+	display: block;
+	color: var(--light);
+	text-decoration: none;
+	padding: 0.75em 1em;
+	font-weight: normal;
+}
+
+.menu a.current {
+	color: var(--accent-color);
+	font-weight: bold;
+}
+
+.menu a.current:hover, .menu a.current:focus {
+	font-style: normal;
+}
+
+/* the styles for the submenu */
+.submenu {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	background-color: var(--primary-color);
+	min-width: 200px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.menu > li:hover .submenu {
+	display: block;
+}
+
+.submenu li {
+	margin: 0;
+	padding: 0;
+}
+
+.submenu a {
+	padding: 0.75em 1em;
+	border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* I swear to god if this navbar styling doesnt work like on ex7-2 I'm gunna throw myself off the 405. */
 /* the styles for the main element */
 main {
 	clear: left;
